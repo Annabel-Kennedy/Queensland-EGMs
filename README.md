@@ -7,7 +7,7 @@ Data is cleaned and queried from 2 datasets: the monthly gaming machine data (i.
 
 ## Instructions to run project on Google Cloud VM
 **Before running all docker containers:**
--	Ensure that your default http firewall rule lists all ports used in the docker-compose (.yml) and Hadoop Env file. For example, port 8888 should be listed in your default http firewall rule as the service jupyter-notebook in the docker-compose file uses this port.
+-	Ensure that your default http firewall rule lists all ports used in the docker-compose (.yml) and Hadoop Env file. For example, port 8888 should be listed in your default http firewall rule as the service jupyter-notebook in the docker-compose file uses this port. 
 
 **To run all docker containers and upload datasets to HDFS:**
 1.	mkdir -p $HOME/project
