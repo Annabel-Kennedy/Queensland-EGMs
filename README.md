@@ -7,7 +7,7 @@ Data is cleaned and queried from 2 datasets: the monthly gaming machine data (i.
 
 ## Instructions to run project on Google Cloud VM
 **Before running all docker containers:**
--	Ensure that your default http firewall rule lists all ports used in the docker-compose (.yml) and Hadoop Env file. For example, port 8888 should be listed in your default http firewall rule as the service jupyter-notebook in the docker-compose file uses this port. 
+-	Ensure that your default http firewall rule lists all ports used in the docker-compose (.yml) and Hadoop Env file. For example, port 8888 should be listed in your default http firewall rule becuase the jupyter-notebook service uses this port (as seen in the docker-compose file). 
 
 **To run all docker containers and upload datasets to HDFS:**
 1.	mkdir -p $HOME/project
@@ -17,10 +17,8 @@ Data is cleaned and queried from 2 datasets: the monthly gaming machine data (i.
     This code was taken from prac content from the course INFS3208 at UQ and used to suit my project needs.
 4.	vim docker-compose.yml
     
-    The docker-compose file used in this project was adapted from code shown in multiple prac classes in UQ's INFS3208 course.
 5.	docker-compose -f docker-compose.yml up -d
     
-    This runs all docker containers and was code learned in INFS3208 pracs.
 6.	Check the UI is visible for all services, where {external-ip} refers to the external IP address of your VM:
     
     http://{external-ip}:4040/dfshealth.html#tab-overview (to see HDFS)
